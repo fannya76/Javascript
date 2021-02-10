@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let texte = prompt("Veuillez entrer votre texte")
+        texte = texte.toUpperCase()
+
+        let newTexte = ""
+
+// INVERSER UNE CHAINE DE CARACTERE
+
+for(i=3; i >= 0; i--)
+{
+    newTexte += texte[i]
+}
+
+if(newTexte === texte)
+{
+    alert("C'est un palindrome")
+}
+else 
+{
+    alert("Ce n'est pas un palindrome")
+}
+
+// INVERSER UNE CHAINE DE CARACTERE
+
+// for i in range(len(texte)-1, -1, -1):
+//   newTexte = newTexte + texte[i]  # idem que newTexte += texte[i]
+
+// if newTexte == texte:
+//   print("C'est un palindrome")
+// else:
+//   print("Ce n'est pas un palindrome")
+    </script>
+</body>
+</html>
