@@ -7,19 +7,19 @@
 
     <style>
         #para {
-            font-size: 5vh;
+            font-size: 3vh;
             margin : 5vh;
         }
     </style>
 </head>
 <body>
-
-    <p id="para"></p>
+	<p><h1>Algorithme indien (procédé Kaprelar)</h1></p>
+    <div id="para"></div>
 
     <script>
-        let nombre = prompt('Veuillez entrez un nombre positif')
+        let nombre = prompt('Veuillez entrez un nombre positif à 3 chiffres')
         nombre = parseInt(nombre)
-        document.getElementById('para').innerHTML = 'Votre nombre de départ : ' + nombre + '<br>'
+        document.getElementById('para').innerHTML = '<p>Votre nombre de départ : ' + nombre + '<p>'
 
         let nbGrand
         let nbPetit
@@ -29,12 +29,12 @@
 
 kaprelar(nombre)
 
- function kaprelar(n) // sort le plus grand, le plus petit, soustrait, si resultat différent, rebelote
+ function kaprelar(n) // sort le plus grand, le plus petit, soustrait, si resultat de  la soustraction différent de n, rebelote
     {
 
         // afficher resultat newNb dans para
         if(newNb > 0) {
-        document.getElementById('para').innerHTML += 'iteration ' + iteration + ' : ' + newNb + '<br>'
+        document.getElementById('para').innerHTML += '<li>iteration ' + iteration + ' : ' + newNb + '</li><br>'
         }
         // convertir nombre en chaine puis en tableau
             n = "" + n
@@ -44,7 +44,7 @@ kaprelar(nombre)
         // sortir nbPetit
 
             // trier tabNb par ordre Croissant, convertir en string puis en nb
-                // tabNbCroiss = tabNb.sort((a, b) => a - b) pour tab de nb mais ici tab de string ???
+                
                 tabNbCroiss = tabNb.sort()
 
                 nbPetit = tabNbCroiss.join('')
@@ -70,14 +70,14 @@ kaprelar(nombre)
                 iteration++
                 kaprelar(newNb) 
             }
+            else 
+            {
+        document.getElementById('para').innerHTML += '<em><strong>Votre nombre ' + nombre  + ' conduit à ' + newNb + ' en ' + iteration +' iterations</strong></em>'
+
+            }
 
     }
-
     
-
-      
-
-
     </script>
 </body>
 </html>
